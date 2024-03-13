@@ -9,7 +9,7 @@ public class main {
         System.out.println("Сейчас будет краткий курс как проиграть в G.O.V.N.O 2");            // Для Сани
 
         String firstHero = util.inputString("Выберете героя: Аппарат или Лион - ");
-
+try {
         if (firstHero.equals("Аппарат")) {
             System.out.println("Вы выбрали героя: " + firstHero);
             int pos = util.inputInt("Какую позицию вы собираетесь выбрать?", 1,5 );
@@ -62,11 +62,33 @@ public class main {
                     System.exit(1);
                 } else if (checkBrain.equals("B")) {
                     System.out.println("Умничка,сложный выбор был...");
+                }else {
+                    System.out.println("Тупой что ли? Не видно,что выбрать надо? Отправляемся к Ленину");
+                    System.exit(1);
                 }
             }
+            System.out.println("У нас почти получилось! Осталось еще чуть-чуть ");
+            System.out.println("Представляем ситуацию: увидели на мини карте много героев,а на другом конце карты фармит кор один, наш кор коллит нажать смок и убить кора,наши действия?");
+            System.out.println("A(eng) - Купить смока, и пойти с командой на кора");
+            System.out.println("B(eng) - Подумать,стоит ли это делать?");
+            String move = util.inputString(" ");
 
+            if (move.equals("A")) {
+                System.out.println("Победа! Выйграли! Ура...");
+            } else if (move.equals("B")) {
+                System.out.println("НЕ ДУМАЙ! НИКОГДА! ТЫ НЕ УМЕЕШЬ! ДАЖЕ ТУТ ПРОИГРАТЬ УМУДРИЛСЯ");
+                System.exit(0);
+            } else {
+                System.out.println("За тупость в помойку");
+                System.exit(0);
+            }
 
         }
+        }catch (Exception e) {
+    System.out.println("За тупость в помойку");
+    System.exit(0);                                        // TODO
+}
+
     }
 
     }
