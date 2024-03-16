@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class util {
+public class Util {
     static int inputInt(String message, int min, int max) {
 
         boolean isValidInput;
